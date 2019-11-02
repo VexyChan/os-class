@@ -7,7 +7,6 @@ main(){
 	command[2]="exec";
 	syscall(0,"SHELL>",0);
 	syscall(1,line,0);
-	syscall(0,"I get here\r\n",0);
 	while(command[index]!='\0'){
 		int l=0;
 		int trufal =1;		
@@ -37,15 +36,17 @@ main(){
 				syscall(0,"I PRINT TYPE\r\n",0);
 				break;
 			}
+			else if(index==2){
+				syscall(0,"I exec\r\n",0);
+				break;
+			}
 			else if(index== 3){
 				syscall(0,"Command Not Found\r\n",0);
+				break;
 			}
 		}
 
 		index++;
-	}				
-	// exacutes line
-	syscall(4,line,0);
-	// returns to shell	
+	}					
 	syscall(5,0,0);
 }	

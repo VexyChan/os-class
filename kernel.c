@@ -2,7 +2,7 @@ void printString(char*);
 void readstring(char*);
 void printChar(char) ;
 void readsector(char*,int);
-void readfile(char*,char,int*);
+void readfile(char*,char*,int*);
 void handleInterrupt21(int , int , int, int);
 void executeProgram(char*);
 void terminate();
